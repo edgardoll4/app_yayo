@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         .light); // opciones para la bara de estado y notificaciones del telefono
     return MaterialApp(
         debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),
         title: 'YaYo App',
         initialRoute: 'homa_screen',
         routes: {

@@ -1,5 +1,7 @@
-import 'package:app_yayo/widgets/custom_botton_navigation.dart';
 import 'package:flutter/material.dart';
+import 'package:app_yayo/widgets/card_table.dart';
+import 'package:app_yayo/widgets/custom_botton_navigation.dart';
+
 import 'package:app_yayo/widgets/backround.dart';
 import 'package:app_yayo/widgets/page_title.dart';
 
@@ -31,7 +33,12 @@ class _HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: [PageTitle()],
+        children: [
+          // Title
+          PageTitle(),
+          // Card table
+          CardTable(),
+        ],
       ),
     );
   }
