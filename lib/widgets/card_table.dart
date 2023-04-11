@@ -29,7 +29,7 @@ class CardTable extends StatelessWidget {
           _SingleCard(
             tipoIcon: Icons.card_travel_sharp,
             textIcon: 'Card',
-            colorIcon: Color.fromARGB(255, 0, 77, 89),
+            colorIcon: Color.fromARGB(255, 26, 125, 1),
           )
         ]),
         TableRow(children: [
@@ -113,7 +113,7 @@ class _CardBackground extends StatelessWidget {
           child: Container(
             height: 180,
             decoration: BoxDecoration(
-                color: Color.fromARGB(78, 73, 6, 64),
+                color: Color.fromARGB(103, 73, 6, 41),
                 borderRadius: BorderRadius.circular(20)),
             child: this.child,
           ),
