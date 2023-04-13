@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:app_yayo/constants/colors_theme.dart';
 import 'package:flutter/material.dart';
 
 class CardTable extends StatelessWidget {
@@ -113,7 +114,7 @@ class _CardBackground extends StatelessWidget {
           child: Container(
             height: 180,
             decoration: BoxDecoration(
-                color: Color.fromARGB(103, 73, 6, 41),
+                color: ColorsThemeDefaul().colorBgDark,
                 borderRadius: BorderRadius.circular(20)),
             child: this.child,
           ),

@@ -1,13 +1,14 @@
 import 'dart:math';
 
+import 'package:app_yayo/constants/colors_theme.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
   final boxDecoration = BoxDecoration(
       gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 0, 3, 55),
-            Color.fromARGB(255, 8, 8, 17),
+            ColorsThemeDefaul().colorBgPrimary,
+            ColorsThemeDefaul().colorBgPrimaryDark,
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -42,8 +43,8 @@ class _PinkBox extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(80),
             gradient: LinearGradient(colors: [
-              Color.fromRGBO(224, 50, 230, 1),
-              Color.fromRGBO(240, 30, 163, 1)
+              Color.fromRGBO(50, 122, 230, 1),
+              Color.fromRGBO(30, 51, 240, 1)
             ])),
       ),
     );
