@@ -13,9 +13,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle
         .light); // opciones para la bara de estado y notificaciones del telefono
+
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData.dark(),
+        theme: ThemeData(
+          useMaterial3: true,
+          // colorSchemeSeed: Colors.red,
+          colorScheme: ColorScheme.light(),
+        ),
         title: 'YaYo App',
         initialRoute: 'homa_screen',
         routes: {
