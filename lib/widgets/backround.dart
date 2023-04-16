@@ -24,7 +24,7 @@ class Background extends StatelessWidget {
           decoration: boxDecoration,
         ),
         // Box pink
-        Positioned(top: -100, right: 50, child: _PinkBox())
+        const Positioned(top: -100, right: 50, child: _PinkBox())
       ],
     );
   }
@@ -42,7 +42,7 @@ class _PinkBox extends StatelessWidget {
         height: 360,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(80),
-            gradient: LinearGradient(colors: [
+            gradient: const LinearGradient(colors: [
               Color.fromRGBO(50, 122, 230, 1),
               Color.fromRGBO(30, 51, 240, 1)
             ])),

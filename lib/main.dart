@@ -19,14 +19,14 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
           // colorSchemeSeed: Colors.red,
-          colorScheme: ColorScheme.light(),
+          colorScheme: const ColorScheme.light(),
         ),
         title: 'YaYo App',
         initialRoute: 'homa_screen',
         routes: {
-          'basic_design': (BuildContext context) => BasicDesignScreen(),
+          'basic_design': (BuildContext context) => const BasicDesignScreen(),
           'scroll_screen': (BuildContext context) => ScrollScreen(),
-          'homa_screen': (BuildContext context) => HomeScreen(),
+          'homa_screen': (BuildContext context) => const HomeScreen(),
         });
   }
 }

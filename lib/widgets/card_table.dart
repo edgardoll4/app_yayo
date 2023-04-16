@@ -10,7 +10,7 @@ class CardTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Table(
       children: [
-        TableRow(children: [
+        const TableRow(children: [
           _SingleCard(
             tipoIcon: Icons.pie_chart_sharp,
             textIcon: 'Geneal',
@@ -21,7 +21,7 @@ class CardTable extends StatelessWidget {
             colorIcon: Colors.deepPurpleAccent,
           )
         ]),
-        TableRow(children: [
+        const TableRow(children: [
           _SingleCard(
             tipoIcon: Icons.movie_creation_sharp,
             colorIcon: Color.fromARGB(255, 209, 129, 2),
@@ -33,7 +33,7 @@ class CardTable extends StatelessWidget {
             colorIcon: Color.fromARGB(255, 26, 125, 1),
           )
         ]),
-        TableRow(children: [
+        const TableRow(children: [
           _SingleCard(
             tipoIcon: Icons.calendar_today_sharp,
             colorIcon: Color.fromARGB(255, 235, 5, 132),
@@ -45,7 +45,7 @@ class CardTable extends StatelessWidget {
             colorIcon: Color.fromARGB(255, 98, 1, 150),
           )
         ]),
-        TableRow(children: [
+        const TableRow(children: [
           _SingleCard(
             tipoIcon: Icons.computer_sharp,
             colorIcon: Color.fromARGB(255, 11, 52, 232),
@@ -87,7 +87,7 @@ class _SingleCard extends StatelessWidget {
           ),
           radius: 50,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
@@ -106,7 +106,7 @@ class _CardBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(15),
+      margin: const EdgeInsets.all(15),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: BackdropFilter(
