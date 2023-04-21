@@ -11,6 +11,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('AppBar'),
+        elevation: 15,
+      ),
       body: Stack(
         children: [
           // Background

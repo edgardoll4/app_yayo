@@ -1,3 +1,4 @@
+import 'package:app_yayo/widgets/custom_botton_navigation.dart';
 import 'package:flutter/material.dart';
 
 class ScrollScreen extends StatelessWidget {
@@ -15,17 +16,19 @@ class ScrollScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      decoration: boxDecoration,
-      child: PageView(
-        physics: BouncingScrollPhysics(),
-        scrollDirection: Axis.vertical,
-        children: [
-          PagePrimary(),
-          PageSecundary(),
-        ],
+      body: Container(
+        decoration: boxDecoration,
+        child: PageView(
+          physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.vertical,
+          children: [
+            PagePrimary(),
+            PageSecundary(),
+          ],
+        ),
       ),
-    ));
+      bottomNavigationBar: const CustomBottomNavigationBar(),
+    );
   }
 }
 

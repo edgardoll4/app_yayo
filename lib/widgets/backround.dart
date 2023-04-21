@@ -1,22 +1,26 @@
 import 'dart:math';
 
+import 'package:app_yayo/config/theme/app_theme.dart';
 import 'package:app_yayo/constants/colors_theme.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
-  final boxDecoration = BoxDecoration(
-      gradient: LinearGradient(
-          colors: [
-            ColorsThemeDefaul().colorBgPrimary,
-            ColorsThemeDefaul().colorBgPrimaryDark,
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          stops: [0.2, 0.8]));
   Background({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    final boxDecoration = BoxDecoration(
+        gradient: LinearGradient(
+            colors: [
+              // Theme.of(context).primaryColor,
+              // Theme.of(context).primaryColorDark,
+              ColorsThemeDefaul().colorBgPrimary,
+              ColorsThemeDefaul().colorBgPrimaryDark,
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.2, 0.8]));
     return Stack(
       children: [
         // Background gradient blue dark
@@ -35,6 +39,8 @@ class _PinkBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context);
+
     return Transform.rotate(
       angle: -pi / 5.0,
       child: Container(
@@ -42,9 +48,11 @@ class _PinkBox extends StatelessWidget {
         height: 360,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(80),
-            gradient: const LinearGradient(colors: [
-              Color.fromRGBO(50, 122, 230, 1),
-              Color.fromRGBO(30, 51, 240, 1)
+            gradient: LinearGradient(colors: [
+              // colors.primaryColor,
+              // colors.primaryColorDark,
+              Color.fromRGBO(53, 126, 236, 0.692),
+              Color.fromRGBO(41, 53, 165, 0.637)
             ])),
       ),
     );

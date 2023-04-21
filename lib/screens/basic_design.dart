@@ -1,3 +1,4 @@
+import 'package:app_yayo/widgets/custom_botton_navigation.dart';
 import 'package:flutter/material.dart';
 
 class BasicDesignScreen extends StatelessWidget {
@@ -11,25 +12,29 @@ class BasicDesignScreen extends StatelessWidget {
         right: true, // defaul true
         top: true, // defaul true
         bottom: false,
-        child: Column(
-          children: [
-            // Imagen
-            Image(
-              image: AssetImage('assets/images/132132.jpg'),
-            ),
-            // Title
-            Title(),
-            // Buttons Section
-            ButtonSection(),
-            // Description
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-              child: Text(
-                  'Ipsum2312312 fugiat officia fugiat laboris amet enim dolore et nisi officia amet. Laborum aliqua do eiusmod duis laboris. Duis Lorem est eiusmod laborum est excepteur velit non eiusmod ut ut.'),
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              // Imagen
+              const Image(
+                image: AssetImage('assets/images/132132.jpg'),
+              ),
+              // Title
+              const Title(),
+              // Buttons Section
+              const ButtonSection(),
+              // Description
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                child: const Text(
+                    'Ipsum2312312 fugiat officia fugiat laboris amet enim dolore et nisi officia amet. Laborum aliqua do eiusmod duis laboris. Duis Lorem est eiusmod laborum est excepteur velit non eiusmod ut ut.'),
+              )
+            ],
+          ),
         ),
       ),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
@@ -42,7 +47,7 @@ class Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 24.5, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 24.5, vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -60,11 +65,11 @@ class Title extends StatelessWidget {
             ],
           ),
           Expanded(child: Container()),
-          Icon(
+          const Icon(
             Icons.star,
             color: Colors.red,
           ),
-          Text('41')
+          const Text('41')
         ],
       ),
     );
@@ -79,21 +84,21 @@ class ButtonSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          IconParametro(
+          const IconParametro(
             tipoIcon: Icons.call,
             colorIcon: Colors.purpleAccent,
             textIcon: 'Call',
           ),
-          IconParametro(
+          const IconParametro(
             tipoIcon: Icons.near_me,
             colorIcon: Colors.redAccent,
             textIcon: 'Route',
           ),
-          IconParametro(
+          const IconParametro(
             tipoIcon: Icons.share,
             colorIcon: Colors.blueAccent,
             textIcon: 'Share',
